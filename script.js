@@ -1,6 +1,6 @@
-// Hardcoded username and password
-const validUsername = "test";
-const validPassword = "test";
+// Obfuscated credentials (Base64 encoding)
+const validUsername = atob("dGVzdA==");  
+const validPassword = atob("dGVzdA==");
 
 // Get elements
 const loginForm = document.getElementById("loginForm");
