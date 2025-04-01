@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki Links</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>My Wiki Links</h1>
-        <p>Curated list of links categorized by type</p>
-    </header>
-    
-    <div class="container">
-        <!-- Main Shop Category -->
-        <section class="category">
-            <h2>Main Shop</h2>
-            <ul>
-                <li><a href="https://www.example1.com" target="_blank">Example Shop 1</a></li>
-                <li><a href="https://www.example2.com" target="_blank">Example Shop 2</a></li>
-                <li><a href="https://www.example3.com" target="_blank">Example Shop 3</a></li>
-            </ul>
-        </section>
-        
-        <!-- Another Category -->
-        <section class="category">
-            <h2>Other Resources</h2>
-            <ul>
-                <li><a href="https://www.resource1.com" target="_blank">Resource 1</a></li>
-                <li><a href="https://www.resource2.com" target="_blank">Resource 2</a></li>
-                <li><a href="https://www.resource3.com" target="_blank">Resource 3</a></li>
-            </ul>
-        </section>
+
+    <!-- Login Page -->
+    <div id="loginPage">
+        <h2>Login to Access Links</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <button type="submit">Login</button>
+        </form>
+        <p id="errorMessage" style="color: red; display: none;">Invalid username or password!</p>
     </div>
 
-    <footer>
-        <p>&copy; 2025 My Wiki Links</p>
-    </footer>
+    <!-- Links Page (Hidden Initially) -->
+    <div id="linksPage" style="display: none;">
+        <header>
+            <h1>Welcome to My Wiki Links</h1>
+        </header>
+        <div class="container">
+            <section class="category">
+                <h2>Main Shop</h2>
+                <ul>
+                    <li><a href="https://www.example1.com" target="_blank">Example Shop 1</a></li>
+                    <li><a href="https://www.example2.com" target="_blank">Example Shop 2</a></li>
+                </ul>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2025 My Wiki Links</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

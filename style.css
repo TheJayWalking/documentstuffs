@@ -1,47 +1,58 @@
-/* General Styles */
+/* Basic Styling */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-header {
+/* Login Page */
+#loginPage {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#loginPage input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#loginPage button {
+    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
-    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginPage button:hover {
+    background-color: #0056b3;
+}
+
+/* Links Page */
+#linksPage {
+    display: none;
+}
+
+h1 {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-}
-
-/* Container to center content */
 .container {
     width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
-/* Categories */
 .category {
     margin-bottom: 30px;
 }
 
 .category h2 {
     font-size: 1.6em;
-    margin-bottom: 10px;
     color: #007BFF;
 }
 
@@ -58,7 +69,6 @@ a {
     text-decoration: none;
     color: #007BFF;
     font-size: 1.1em;
-    transition: color 0.3s;
 }
 
 a:hover {
