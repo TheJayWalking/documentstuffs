@@ -1,6 +1,6 @@
 // Obfuscated credentials (Base64 encoding)
-const validUsername = atob("dGVzdA==");  
-const validPassword = atob("dGVzdA==");
+const validUsername = atob("dGVzdA==");  // Base64 encoded 'test'
+const validPassword = atob("dGVzdA==");  // Base64 encoded 'test'
 
 // Get elements
 const loginForm = document.getElementById("loginForm");
@@ -23,3 +23,32 @@ loginForm.addEventListener("submit", function (e) {
         errorMessage.style.display = "block"; // Show error message
     }
 });
+
+// Show specific category
+function showCategory(category) {
+    const categories = document.querySelectorAll('.categoryLinks');
+    categories.forEach(cat => cat.style.display = 'none');
+    document.getElementById(category).style.display = 'block';
+}
+
+// Filter function
+function filterLinks() {
+    const filter = document.getElementById("filterInput").value.toUpperCase();
+    const rows = document.querySelectorAll("table tbody tr");
+
+    rows.forEach(row => {
+        const cells = row.getElementsByTagName("td");
+        let match = false;
+        for (let i = 0; i < cells.length; i++) {
+            if (cells[i].textContent.toUpperCase().includes(filter)) {
+                match = true;
+                break;
+            }
+        }
+        if (match) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+}
